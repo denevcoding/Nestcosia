@@ -9,18 +9,32 @@ public class MiPcController : MonoBehaviour
 
     public Rigidbody body;
     public float moveSpeed;
-    public InputAction PlayerControls;
+    public PlayerInput playerInput;
+
+
+    //public InputAction PlayerControls;
 
     Vector2 inputDirection = Vector2.zero;
 
     public void OnEnable()
     {
-        PlayerControls.Enable();
+        //PlayerControls.Enable();
     }
 
     public void OnDisable()
     {
-        PlayerControls.Disable();
+        //PlayerControls.Disable();
+    }
+
+
+    private void Awake()
+    {
+        //Input Initialization
+        playerInput = new PlayerInput();
+        playerInput.Gameplay.Enable();
+        playerInput.UI.Disable();
+
+
     }
 
     // Start is called before the first frame update
@@ -32,12 +46,13 @@ public class MiPcController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inputDirection = PlayerControls.ReadValue<Vector2>();
+        inputDirection = playerInput.Gameplay.Move.ReadValue<Vector2>();
+        Debug.Log("X: " + inputDirection.x + "Y: " + inputDirection.y);
     }
 
     private void FixedUpdate()
     {
-        body.velocity = new Vector2(inputDirection.x * moveSpeed, inputDirection.y * moveSpeed);
+        body.velocity = new Vector3(inputDirection.x * moveSpeed, 0, inputDirection.y * moveSpeed);
         //body.AddForce(inputDirection * movForce, ForceMode.Force);
     }
 }
