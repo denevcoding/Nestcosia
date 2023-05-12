@@ -36,6 +36,7 @@ public class MiniBotController : MonoBehaviour
         //inputDirection = new Vector3(x, 0f, y);
 
         inputDirection = PlayerControls.ReadValue<Vector2>();
+
         
     }
 
