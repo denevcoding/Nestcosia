@@ -9,6 +9,8 @@ public class CharacterConrtoller : MonoBehaviour
 
     public bool sideScroller; // the game is 2.5D - Top Down?
 
+    public Animator animController;
+
     //Gameplay Variables using Old Input system
     float h;
     float v;
@@ -69,6 +71,8 @@ public class CharacterConrtoller : MonoBehaviour
         //groundedLayerMask = LayerMask.GetMask("Floor");
         rbCharacter = GetComponent<Rigidbody>();
         InitFloorChecks();
+
+        //nimController = GetComponentInChildren<Animator>();
     }
 
     // Start is called before the first frame update
@@ -91,8 +95,8 @@ public class CharacterConrtoller : MonoBehaviour
         MoveTo(moveDirection, curAccel, 0.05f, true);
         //RotateVelocity(rotateSpeed, true);
 
-        //if (rotateSpeed != 0 && inputDirection.magnitude != 0)
-        //    RotateToDirection(inputDirection, curRotateSpeed, true);
+        if (rotateSpeed != 0 && inputDirection.magnitude != 0)
+            RotateToDirection(inputDirection, curRotateSpeed, true);
 
 
         ManageSpeed(curDecel, maxSpeed + movingObjSpeed.magnitude, true);
@@ -161,11 +165,22 @@ public class CharacterConrtoller : MonoBehaviour
 
         moveDirection = transform.position + inputDirection;
 
+        if (inputDirection.magnitude <= 0)
+        {
+            animController.SetBool("isMoving", false);
+            
+        }
+        else
+        {
+            animController.SetBool("isMoving", true);
+        }
+
         Debug.DrawRay(transform.position, moveDirection, Color.green);
 
         //inputDirection = moveDirection - transform.position;
         Debug.DrawRay(transform.position, inputDirection, Color.red);
 
+        animController.SetFloat("movSpeed", m_DistanceToTarget);
     }
 
 

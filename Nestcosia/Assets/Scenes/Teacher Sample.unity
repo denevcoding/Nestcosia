@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7866377135820465200, guid: 985e15cc565167a4eaa31af668bb5b91, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7866377135820465201, guid: 985e15cc565167a4eaa31af668bb5b91, type: 3}
       propertyPath: m_AngularDrag
@@ -632,9 +632,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sideScroller: 0
-  maxSpeed: 15
-  accel: 8
-  decel: 5
+  animController: {fileID: 1931063605}
+  maxSpeed: 25
+  accel: 25
+  decel: 25
   airAccel: 65
   airDecel: 10
   m_currentSpeed: {x: -0.00037325174, y: 0, z: -0.00059286266}
