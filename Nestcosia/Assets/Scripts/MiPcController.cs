@@ -6,14 +6,16 @@ using UnityEngine.InputSystem;
 public class MiPcController : MonoBehaviour
 {
 
-
-    public Rigidbody body;
+    //public Rigidbody body;
     public float moveSpeed;
     public PlayerInput playerInput;
+    public Animator animatorController;
+
+
 
 
     //public InputAction PlayerControls;
-
+    public bool movementPressed;
     Vector2 inputDirection = Vector2.zero;
 
     public void OnEnable()
@@ -32,7 +34,14 @@ public class MiPcController : MonoBehaviour
         //Input Initialization
         playerInput = new PlayerInput();
         playerInput.Gameplay.Enable();
-        playerInput.UI.Disable();
+
+        playerInput.Gameplay.Move.performed += ctx => {
+
+            inputDirection = ctx.ReadValue<Vector2>();
+            movementPressed = inputDirection.x != 0 || inputDirection.y != 0;
+        };
+
+        //playerInput.UI.Disable();
 
 
     }
@@ -46,13 +55,31 @@ public class MiPcController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inputDirection = playerInput.Gameplay.Move.ReadValue<Vector2>();
-        Debug.Log("X: " + inputDirection.x + "Y: " + inputDirection.y);
+        //inputDirection = playerInput.Gameplay.Move.ReadValue<Vector2>();
+        //Debug.Log("X: " + inputDirection.x + "Y: " + inputDirection.y);
+
+        HandleRotation();
+    }
+
+    public void HandleMovement()
+    {
+
+    }
+
+    public void HandleRotation()
+    {
+        Vector3 currentPos = transform.position;
+
+        Vector3 newPosition = new Vector3(inputDirection.x, 0, inputDirection.y);
+
+        Vector3 posToLookAt = currentPos + newPosition;
+
+        transform.LookAt(posToLookAt);
     }
 
     private void FixedUpdate()
     {
-        body.velocity = new Vector3(inputDirection.x * moveSpeed, 0, inputDirection.y * moveSpeed);
+        //body.velocity = new Vector3(inputDirection.x * moveSpeed, 0, inputDirection.y * moveSpeed);
         //body.AddForce(inputDirection * movForce, ForceMode.Force);
     }
 }
