@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterConrtoller : MonoBehaviour
 {
+    
     private Rigidbody rbCharacter;//Refernce to my own Rigid Bodie
 
     public bool sideScroller; // the game is 2.5D - Top Down?
@@ -40,7 +41,7 @@ public class CharacterConrtoller : MonoBehaviour
     private Quaternion screenMovementSpace = Quaternion.identity;
     private float curRotateSpeed;
 
-    private Vector3 direction, moveDirection, screenMovementForward, screenMovementRight;
+    private Vector3  moveDirection, screenMovementForward, screenMovementRight;
     private Vector3 inputDirection;
 
     public float rotateSpeed;//Ground rotation speed;
@@ -49,6 +50,8 @@ public class CharacterConrtoller : MonoBehaviour
     private float slope;
     public float slopeLimit;
     public float slideAmount; // Velocity to feel down a slide
+
+
     public float movingPlatformFriction; //Friction of the object like moving platforms 
     private Vector3 movingObjSpeed; // Id we are on a platform
 
@@ -58,12 +61,12 @@ public class CharacterConrtoller : MonoBehaviour
     public Transform floorChecks;
     public Transform[] floorCheckers;
     private bool grounded;
-    int groundedLayerMask; //We can add any layers to this mask and combine to evaluate if we are touching players or something else to restore jump
+    public LayerMask groundedLayerMask; //We can add any layers to this mask and combine to evaluate if we are touching players or something else to restore jump
 
 
     private void Awake()
     {
-        groundedLayerMask = LayerMask.GetMask("Floor");
+        //groundedLayerMask = LayerMask.GetMask("Floor");
         rbCharacter = GetComponent<Rigidbody>();
         InitFloorChecks();
     }
@@ -88,8 +91,8 @@ public class CharacterConrtoller : MonoBehaviour
         MoveTo(moveDirection, curAccel, 0.05f, true);
         //RotateVelocity(rotateSpeed, true);
 
-        if (rotateSpeed != 0 && inputDirection.magnitude != 0)
-            RotateToDirection(inputDirection, curRotateSpeed, true);
+        //if (rotateSpeed != 0 && inputDirection.magnitude != 0)
+        //    RotateToDirection(inputDirection, curRotateSpeed, true);
 
 
         ManageSpeed(curDecel, maxSpeed + movingObjSpeed.magnitude, true);
@@ -199,8 +202,6 @@ public class CharacterConrtoller : MonoBehaviour
         }
 
     }
-
-
 
 
     public void RotateVelocity(float turnSpeed, bool ignoreY)
