@@ -46,6 +46,7 @@ public class MiPcController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         inputDirection = playerInput.Gameplay.Move.ReadValue<Vector2>();
         Debug.Log("X: " + inputDirection.x + "Y: " + inputDirection.y);
     }
