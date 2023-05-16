@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CharacterConrtoller : MonoBehaviour
 {
-    
+
+    public GameManager gameManager;
+
     private Rigidbody rbCharacter;//Refernce to my own Rigid Bodie
 
     public bool sideScroller; // the game is 2.5D - Top Down?
@@ -314,5 +316,6 @@ public class CharacterConrtoller : MonoBehaviour
 
 
 
-  
+
+
 }
