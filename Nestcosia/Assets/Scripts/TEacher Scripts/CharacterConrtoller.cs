@@ -142,7 +142,7 @@ public class CharacterConrtoller : MonoBehaviour
         if (Cam != null)
         {
             //get movement axis relative to camera
-            screenMovementForward = screenMovementSpace * Cam.forward;
+            screenMovementForward = screenMovementSpace * Cam.up;
             screenMovementRight = screenMovementSpace * Cam.right;
         }
         else
