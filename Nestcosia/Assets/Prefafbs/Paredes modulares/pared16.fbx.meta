@@ -1,0 +1,265 @@
+fileFormatVersion: 2
+guid: c868876327e7b48dfabe24a60cf440bd
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 7043424873547826961
+    second: 16|022|Take 001|BaseLayer
+  - first:
+      74: 6544743879564235556
+    second: 16|023|Take 001|BaseLayer
+  - first:
+      74: -8608416603558357808
+    second: 16|024|Take 001|BaseLayer
+  - first:
+      74: -1520842446691615376
+    second: 16|025|Take 001|BaseLayer
+  - first:
+      74: 7153823772484126167
+    second: 16|026|Take 001|BaseLayer
+  - first:
+      74: 5009283762997041767
+    second: 16|027|Take 001|BaseLayer
+  - first:
+      74: 1439640261872915747
+    second: 16|028|Take 001|BaseLayer
+  - first:
+      74: -7988178475600444043
+    second: 16|029|Take 001|BaseLayer
+  - first:
+      74: -8713303059195189982
+    second: 16|030|Take 001|BaseLayer
+  - first:
+      74: -6189315063145856137
+    second: 16|033|Take 001|BaseLayer
+  - first:
+      74: 6161234303344136416
+    second: 16|034|Take 001|BaseLayer
+  - first:
+      74: 3621541587705095987
+    second: 16|036|Take 001|BaseLayer
+  - first:
+      74: -3670018163482118767
+    second: 16|037|Take 001|BaseLayer
+  - first:
+      74: 2961808434704054428
+    second: 16|1-Window|Take 001|BaseLayer
+  - first:
+      74: 48957681802710571
+    second: 16|10|Take 001|BaseLayer
+  - first:
+      74: 2311590921412944520
+    second: 16|11|Take 001|BaseLayer
+  - first:
+      74: 3941218490644125428
+    second: 16|12|Take 001|BaseLayer
+  - first:
+      74: -544735944613357902
+    second: 16|13|Take 001|BaseLayer
+  - first:
+      74: -7767057407626758729
+    second: 16|14|Take 001|BaseLayer
+  - first:
+      74: -6787275533950007443
+    second: 16|15|Take 001|BaseLayer
+  - first:
+      74: 1463483044504966260
+    second: 16|16|Take 001|BaseLayer
+  - first:
+      74: -8393797480740283260
+    second: 16|17|Take 001|BaseLayer
+  - first:
+      74: 5101429602811312475
+    second: 16|18|Take 001|BaseLayer
+  - first:
+      74: 6894397873976169897
+    second: 16|19-Window|Take 001|BaseLayer
+  - first:
+      74: 3323504048485101090
+    second: 16|19|Take 001|BaseLayer
+  - first:
+      74: 3723483758924764127
+    second: 16|1|Take 001|BaseLayer
+  - first:
+      74: -7391359486856827143
+    second: 16|2-Window|Take 001|BaseLayer
+  - first:
+      74: 3153659914779545187
+    second: 16|20dd001|Take 001|BaseLayer
+  - first:
+      74: 7945343402119402252
+    second: 16|20dd|Take 001|BaseLayer
+  - first:
+      74: -8955330571342381009
+    second: 16|21|Take 001|BaseLayer
+  - first:
+      74: 2134510598746489101
+    second: 16|2|Take 001|BaseLayer
+  - first:
+      74: 4730784004216854496
+    second: 16|3-Window|Take 001|BaseLayer
+  - first:
+      74: -1283367648094448233
+    second: 16|3|Take 001|BaseLayer
+  - first:
+      74: -1729886043843719655
+    second: 16|4|Take 001|BaseLayer
+  - first:
+      74: -3276976952207760368
+    second: 16|5|Take 001|BaseLayer
+  - first:
+      74: -3579787782688413561
+    second: 16|6|Take 001|BaseLayer
+  - first:
+      74: 3216656775434719265
+    second: 16|7|Take 001|BaseLayer
+  - first:
+      74: -8987305497837951140
+    second: 16|8|Take 001|BaseLayer
+  - first:
+      74: -7355984250237247888
+    second: 16|9|Take 001|BaseLayer
+  - first:
+      74: 6276919222611866486
+    second: 16|Door|Take 001|BaseLayer
+  - first:
+      74: 2892470627060981327
+    second: 16|Fan_003|Take 001|BaseLayer
+  - first:
+      74: 1453347230015474749
+    second: 16|Fan_004|Take 001|BaseLayer
+  - first:
+      74: -1542292947835560231
+    second: 16|Fan_1.001|Take 001|BaseLayer
+  - first:
+      74: -294573384161798689
+    second: 16|Fan_1|Take 001|BaseLayer
+  - first:
+      74: -5096054210943074106
+    second: 16|Fan_2|Take 001|BaseLayer
+  - first:
+      74: 3968178471799399594
+    second: 16|Sci-Fi-Light-003|Take 001|BaseLayer
+  - first:
+      74: 6729484573872313620
+    second: 16|Sci-Fi-Light-004|Take 001|BaseLayer
+  - first:
+      74: 7639283476708252757
+    second: 16|Sci-Fi-Light-005|Take 001|BaseLayer
+  - first:
+      74: 3988044164453003736
+    second: 16|Sci-Fi-Light-006|Take 001|BaseLayer
+  - first:
+      74: 6354342869750054915
+    second: 16|Sci-Fi-Light-007|Take 001|BaseLayer
+  - first:
+      74: -5240639067843719891
+    second: 16|Sci-Fi-Light-008|Take 001|BaseLayer
+  - first:
+      74: 1581959635910936478
+    second: 16|Sci-Fi-Light-1|Take 001|BaseLayer
+  - first:
+      74: 5423693174675683250
+    second: 16|Sci-Fi-Light-2|Take 001|BaseLayer
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
