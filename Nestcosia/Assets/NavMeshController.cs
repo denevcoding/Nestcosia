@@ -30,6 +30,7 @@ public class NavMeshController : MonoBehaviour
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(currentObjective.position, 1.5f);
+            Gizmos.DrawWireSphere(player.transform.position, 1.5f);
         }
        
     }
@@ -37,14 +38,17 @@ public class NavMeshController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckDistancePlayer();
+        if (CheckDistancePlayer() < 10.0) {
+            Debug.Log("CAPTURADO");
+            bot.destination = player.transform.position;
+        }
         //bot.destination = objective.position;
         if (CheckDistanceToPoint() < 1.5)
         {
 
             foreach (Transform position in wayPaints)
             {
-                Debug.Log("Searching");
+                //Debug.Log("Searching");
                 if (position != currentObjective)
                 {
                     currentObjective = position;
@@ -55,6 +59,7 @@ public class NavMeshController : MonoBehaviour
         }
     }
 
+    //para el recorrido de la patrulla
     public float CheckDistanceToPoint()
     {
         Vector3 charPoint = Vector3.zero;
@@ -69,14 +74,15 @@ public class NavMeshController : MonoBehaviour
         return -1;
     }
 
+    //para capturar al jugador
     public float CheckDistancePlayer()
     {
         Vector3 enemyDistance = Vector3.zero;
 
         enemyDistance =   player.transform.position - transform.position;
 
-        Debug.Log(enemyDistance);
-
+        //Debug.Log(enemyDistance);
+        Debug.DrawLine(transform.position, player.transform.position, Color.blue);
         return enemyDistance.magnitude;
     }
 
