@@ -6,7 +6,10 @@ using UnityEngine.AI;
 public class NavMeshController : MonoBehaviour
 {
     public Transform currentObjective;
-    public GameObject player = new GameObject();
+    public GameObject player;
+
+    public LayerMask detectionMask;
+    public LayerMask playerMask;
 
     public List<Transform> wayPaints = new List<Transform>();
     NavMeshAgent bot;
@@ -42,6 +45,11 @@ public class NavMeshController : MonoBehaviour
             Debug.Log("CAPTURADO");
             bot.destination = player.transform.position;
         }
+
+
+
+
+
         //bot.destination = objective.position;
         if (CheckDistanceToPoint() < 1.5)
         {
@@ -59,6 +67,12 @@ public class NavMeshController : MonoBehaviour
         }
     }
 
+
+    //public void FixedUpdate()
+    //{
+      //  Physics.SphereCast(transform.position, );
+    //}
+
     //para el recorrido de la patrulla
     public float CheckDistanceToPoint()
     {
@@ -73,6 +87,8 @@ public class NavMeshController : MonoBehaviour
 
         return -1;
     }
+
+
 
     //para capturar al jugador
     public float CheckDistancePlayer()
