@@ -38,7 +38,7 @@ public class NavMeshController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CheckDistancePlayer() < 10.0) {
+        if (CheckDistancePlayer() < 6.0) {
             Debug.Log("CAPTURADO");
             bot.destination = player.transform.position;
         }
