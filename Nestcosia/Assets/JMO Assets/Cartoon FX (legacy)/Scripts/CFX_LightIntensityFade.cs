@@ -15,7 +15,7 @@ public class CFX_LightIntensityFade : MonoBehaviour
 	public float delay = 0.0f;
 	
 	/// Final intensity of the light.
-	public float finalIntensity = 0.0f;
+	public float finalIntensity = 0.05f;
 	
 	// Base intensity, automatically taken from light parameters.
 	private float baseIntensity;
@@ -23,7 +23,7 @@ public class CFX_LightIntensityFade : MonoBehaviour
 	// If <c>true</c>, light will destructs itself on completion of the effect
 	public bool autodestruct;
 	
-	private float p_lifetime = 0.0f;
+	private float p_lifetime = 0.05f;
 	private float p_delay;
 	
 	void Start()
