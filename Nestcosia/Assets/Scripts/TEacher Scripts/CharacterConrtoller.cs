@@ -82,6 +82,8 @@ public class CharacterConrtoller : MonoBehaviour
     {
         playerInput = new PlayerInput();
         playerInput.Gameplay.Enable();
+
+        playerInput.Gameplay.Interact.started += GetComponent<Interacter>().Interact;
     }
 
     // Update is called once per frame
