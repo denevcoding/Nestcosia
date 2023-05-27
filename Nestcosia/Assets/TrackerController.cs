@@ -53,6 +53,7 @@ public class TrackerController : MonoBehaviour
 
         if (hitted)
         {
+            
             Debug.Log("PlAYER CATCHED");
         }
 
