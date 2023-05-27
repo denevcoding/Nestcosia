@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -6842666708266138392, guid: 56a1922e99038854d8e87792d165af99, type: 3}
+  m_Motion: {fileID: -4791504522942941401, guid: 56a1922e99038854d8e87792d165af99, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: Activate
@@ -54,7 +54,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BPT1
+  m_Name: BPT3
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Activate
