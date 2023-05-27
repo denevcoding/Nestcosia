@@ -14077,7 +14077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539341943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.9, y: -3.86, z: 15.04}
+  m_LocalPosition: {x: -6.6, y: 0.84, z: 11.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20699,7 +20699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770844707}
   m_LocalRotation: {x: 0.5506196, y: 0.0012101505, z: -0.0018346198, w: 0.83475345}
-  m_LocalPosition: {x: -2.0993056, y: 10.430838, z: -23.19261}
+  m_LocalPosition: {x: -2.0971308, y: 10.430834, z: -23.192617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42030,7 +42030,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 300
@@ -42054,12 +42054,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39079845b6c424d3ca642977db099cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   currentObjective: {fileID: 0}
   player: {fileID: 206212141}
   detectionMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 648
   playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  rayDistance: 5
+  damageMask:
     serializedVersion: 2
     m_Bits: 0
   wayPaints:
@@ -45084,7 +45089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643441105}
   m_LocalRotation: {x: 0.5506196, y: 0.0012101505, z: -0.0018346198, w: 0.83475345}
-  m_LocalPosition: {x: -2.0993056, y: 10.430838, z: -23.19261}
+  m_LocalPosition: {x: -2.0971308, y: 10.430834, z: -23.192617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

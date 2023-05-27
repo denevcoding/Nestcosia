@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum BotState
+{
+    Wander,
+    Pursuing
+}
+
 public class NavMeshController : MonoBehaviour
 {
+    public BotState state;
+
     public Transform currentObjective;
     public GameObject player;
 
     public LayerMask detectionMask;
     public LayerMask playerMask;
+
+    public float rayDistance;
+    public LayerMask damageMask;
 
     public List<Transform> wayPaints = new List<Transform>();
     NavMeshAgent bot;
@@ -41,19 +52,38 @@ public class NavMeshController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CheckDistancePlayer() < 6.0) {
-            Debug.Log("CAPTURADO");
-            bot.destination = player.transform.position;
+        switch (state)
+        {
+            case BotState.Wander:
+                Wandering();
+                break;
+
+                case BotState.Pursuing:
+                Pursuing();
+                break;
+      
         }
 
+     
+
+       
+    }
 
 
+    private void FixedUpdate()
+    {
+
+        //Pursuing();
+       
 
 
+    }
+
+    public void Wandering()
+    {
         //bot.destination = objective.position;
         if (CheckDistanceToPoint() < 1.5)
         {
-
             foreach (Transform position in wayPaints)
             {
                 //Debug.Log("Searching");
@@ -65,12 +95,49 @@ public class NavMeshController : MonoBehaviour
                 }
             }
         }
+
+        RaycastHit hit;
+        bool hitted = Physics.Raycast(transform.position, transform.forward * rayDistance, out hit, rayDistance, playerMask);
+
+        Debug.DrawRay(transform.position, transform.forward * rayDistance, Color.cyan);
+
+        if (/*CheckDistancePlayer() < 6.0 &&*/ hitted)
+        {
+            Debug.Log("CAPTURADO y con RAYOO");
+            state = BotState.Pursuing;
+        }
+
     }
 
 
+    public void Pursuing()
+    {
+        Debug.Log("Pursuing");
+        bot.destination = player.transform.position;
+
+        Vector3 dir = player.transform.position - transform.position;
+        Vector3 rayPos = transform.position;
+        rayPos.y += 1.2f;
+        RaycastHit hit;
+        bool hitted = Physics.Raycast(rayPos, dir * rayDistance, out hit, rayDistance, detectionMask);
+
+        Debug.DrawRay(rayPos, dir * rayDistance, Color.red);
+
+        if (/*CheckDistancePlayer() < 6.0 &&*/ hitted)
+        {
+            Debug.Log(hit.collider.gameObject.name + " Lo perdi");
+            if (hit.collider != player.GetComponent<Collider>())
+            {
+               
+                state = BotState.Wander;
+            }
+           
+        }
+    }
+
     //public void FixedUpdate()
     //{
-      //  Physics.SphereCast(transform.position, );
+    //  Physics.SphereCast(transform.position, );
     //}
 
     //para el recorrido de la patrulla
