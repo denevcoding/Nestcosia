@@ -1,15 +1,29 @@
 fileFormatVersion: 2
-guid: 06dd67c46f5edfd4c9d786225ecc1061
+guid: 36108af5eb690d64fb74d5eb7c924e65
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable:
+  internalIDToNameTable: []
+  externalObjects:
   - first:
-      74: -6883033758598354347
-    second: Evilbot|EvilbotIdle
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 630e56f1a09cb304c8fbdaeed1092b14, type: 2}
   - first:
-      74: 7960904066081714726
-    second: Evilbot|EvilbotRun
-  externalObjects: {}
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aluminum
+    second: {fileID: 2100000, guid: 3295bebe38c74d540a9304a1840793c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cristal
+    second: {fileID: 2100000, guid: 635f638399898e345a400757fc2300c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light
+    second: {fileID: 2100000, guid: 1ee2bc89d7c750849bf49526f99463bf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

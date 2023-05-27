@@ -21,6 +21,11 @@ public class GameManager : MonoBehaviour
 
     public void AddPlantita()
     {
-        plantsAmount++;
+        plantsAmount+=1;
+    }
+
+    public void AddEnergy()
+    {
+        batteryAmount += 1;
     }
 }

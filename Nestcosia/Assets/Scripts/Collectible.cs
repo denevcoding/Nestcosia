@@ -2,9 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CollectibleType
+{
+    BlueCell,
+    GreenCell,
+}
 public class Collectible : MonoBehaviour
 {
     public GameManager gameManager;
+    public CollectibleType type;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +26,19 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         if (other.tag == "Player")
         {
-            gameManager.AddPlantita();
+            if (type == CollectibleType.BlueCell)
+            {
+                gameManager.AddEnergy();
+
+            }
+            if (type == CollectibleType.GreenCell)
+            {
+                gameManager.AddPlantita();
+            }
+      
             Destroy(this.gameObject);
         }
     }
