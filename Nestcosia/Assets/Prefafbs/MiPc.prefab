@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6156860711078657882}
   - component: {fileID: 6156860711078657887}
   - component: {fileID: 6156860711078657886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MiPc
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,11 +77,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121dd071792cec9488767efb8d45a5ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   sideScroller: 0
   animController: {fileID: 6156860711642117662}
-  maxSpeed: 25
-  accel: 25
-  decel: 25
+  maxSpeed: 5
+  accel: 1.5
+  decel: 50
   airAccel: 65
   airDecel: 10
   m_currentSpeed: {x: -0.00037325174, y: 0, z: -0.00059286266}
