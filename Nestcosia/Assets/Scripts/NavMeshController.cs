@@ -61,7 +61,6 @@ public class NavMeshController : MonoBehaviour
                 case BotState.Pursuing:
                 Pursuing();
                 break;
-      
         }
 
      
@@ -81,6 +80,8 @@ public class NavMeshController : MonoBehaviour
 
     public void Wandering()
     {
+       
+        bot.destination = currentObjective.position;
         //bot.destination = objective.position;
         if (CheckDistanceToPoint() < 1.5)
         {
@@ -90,10 +91,15 @@ public class NavMeshController : MonoBehaviour
                 if (position != currentObjective)
                 {
                     currentObjective = position;
-                    bot.destination = currentObjective.position;
+                    //bot.destination = currentObjective.position;
                     return;
                 }
             }
+        }
+
+        if (currentObjective != null)
+        {
+            bot.destination = currentObjective.position;
         }
 
         RaycastHit hit;
@@ -105,6 +111,7 @@ public class NavMeshController : MonoBehaviour
         {
             Debug.Log("CAPTURADO y con RAYOO");
             state = BotState.Pursuing;
+
         }
 
     }
@@ -113,6 +120,7 @@ public class NavMeshController : MonoBehaviour
     public void Pursuing()
     {
         Debug.Log("Pursuing");
+     
         bot.destination = player.transform.position;
 
         Vector3 dir = player.transform.position - transform.position;
@@ -128,7 +136,7 @@ public class NavMeshController : MonoBehaviour
             Debug.Log(hit.collider.gameObject.name + " Lo perdi");
             if (hit.collider != player.GetComponent<Collider>())
             {
-               
+                
                 state = BotState.Wander;
             }
            
