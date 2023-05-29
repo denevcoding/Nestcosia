@@ -11,6 +11,7 @@ public class Collectible : MonoBehaviour
 {
     public GameManager gameManager;
     public CollectibleType type;
+    public bool isCaptured;
 
     // Start is called before the first frame update
     void Start()
@@ -26,20 +27,28 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (isCaptured)
+        {
+            return;
+        }
         Debug.Log(other.name);
         if (other.tag == "Player")
         {
-            if (type == CollectibleType.BlueCell)
-            {
-                gameManager.AddEnergy();
+         
+            Interacter interacter = other.gameObject.GetComponent<Interacter>();
+            interacter.AddBattery(this);           
+            gameObject.SetActive(false);
+            //if (type == CollectibleType.BlueCell)
+            //{
+            //    gameManager.AddEnergy();
 
-            }
-            if (type == CollectibleType.GreenCell)
-            {
-                gameManager.AddPlantita();
-            }
+            //}
+            //if (type == CollectibleType.GreenCell)
+            //{
+            //    gameManager.AddPlantita();
+            //}
       
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 }

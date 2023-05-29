@@ -211,3 +211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   socketPositions: []
+  bateries: []
+  MaxBatteryAmount: 3
+  onChargerFull:
+    m_PersistentCalls:
+      m_Calls: []

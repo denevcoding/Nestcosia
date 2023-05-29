@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 96244049368923725}
   - component: {fileID: 96244049368923722}
   - component: {fileID: 96244049368923723}
-  - component: {fileID: 96244049368923720}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -116,19 +115,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &96244049368923720
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96244049368923721}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.0088067, y: 0.24490595, z: 2.0176392}
-  m_Center: {x: -0.05912757, y: -0.37754703, z: -1.0325356}
 --- !u!1001 &96244048404835520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,6 +186,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 36108af5eb690d64fb74d5eb7c924e65, type: 3}
   m_PrefabInstance: {fileID: 96244048404835520}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2142275312075113960
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978552851857363345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0363042, y: 0.24490595, z: 2.0176392}
+  m_Center: {x: 0.0037476823, y: -0.049999997, z: 0}
 --- !u!95 &96244048404835522
 Animator:
   serializedVersion: 4
@@ -220,3 +219,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6287362133658821581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978552851857363345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e666be8ce5c3e46a0ee60b14e6117b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cargadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  fullChargers: 0
+  animatorElevator: {fileID: 0}
+--- !u!65 &1759811635
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978552851857363345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.33, y: 0.34, z: 1.42}
+  m_Center: {x: 0, y: 0.31, z: 0}
