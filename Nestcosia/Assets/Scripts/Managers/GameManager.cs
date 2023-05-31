@@ -60,4 +60,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("level_menuStart", LoadSceneMode.Single);
     }
+
+    public void loadCredits()
+    {
+        SceneManager.LoadScene("credits", LoadSceneMode.Single);
+    }
 }

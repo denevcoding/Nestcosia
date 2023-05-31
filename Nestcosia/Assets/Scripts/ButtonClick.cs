@@ -39,4 +39,8 @@ public class ButtonClick : MonoBehaviour
         GameManager.instance.loadGame();
     }
 
+    public void loadCredits()
+    {
+        GameManager.instance.loadCredits();
+    }
 }
