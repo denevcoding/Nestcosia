@@ -23,5 +23,10 @@ public class ButtonClick : MonoBehaviour
     }
 
 
+    public void loadMenu()
+    {
+        GameManager.instance.loadStart();
+    }
+
 
 }
