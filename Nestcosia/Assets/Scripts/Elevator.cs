@@ -9,6 +9,7 @@ public class Elevator : MonoBehaviour
     public int fullChargers = 0;
 
     public Animator animatorElevator;
+    public GameObject textUi;
 
 
 
@@ -47,6 +48,11 @@ public class Elevator : MonoBehaviour
         {
             Debug.Log("Algun cargador que activa este elevador aun no esta lleno");
         }
+    }
+
+    public void showUI(bool show)
+    {
+        textUi.SetActive(show);
     }
 
 }

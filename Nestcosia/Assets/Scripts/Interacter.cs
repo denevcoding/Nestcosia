@@ -48,6 +48,9 @@ public class Interacter : MonoBehaviour
         if (other.gameObject.GetComponent<Elevator>())
         {
             elevator = other.GetComponent<Elevator>();
+
+            elevator.showUI(true);
+
             Debug.Log("Estoy en un elevador");
         }
     }
@@ -61,7 +64,9 @@ public class Interacter : MonoBehaviour
 
         if (other.gameObject.GetComponent<Elevator>())
         {
+            elevator.showUI(false);
             elevator = null;
+           
         }
     }
 
