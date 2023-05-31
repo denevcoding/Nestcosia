@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 9b02110fc3ec2424391b94649cc5ddda
+guid: 4c41736fbe1043b459d4e47c9ac8831d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
-      74: -9099282967706505419
-    second: Armature|OpenDoor
+      74: -1422011007694221501
+    second: Armature|ArmatureAction.001
   externalObjects: {}
   materials:
     materialImportMode: 2
