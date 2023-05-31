@@ -7,6 +7,7 @@ public class UiManager : MonoBehaviour
 
     public GameObject hud;
     public GameObject gameOverUi;
+    public GameObject gameWinUi;
 
 
 
@@ -27,4 +28,11 @@ public class UiManager : MonoBehaviour
         hud.SetActive(false);
         gameOverUi.SetActive(true);
     }
+
+    public void Winner()
+    {
+        hud.SetActive(false);
+        gameWinUi.SetActive(true);
+    }
 }
+

@@ -43,6 +43,11 @@ public class Elevator : MonoBehaviour
         if (fullChargers == cargadores.Count)
         {
             animatorElevator.SetBool("LiftUnlocked", true);
+
+            UiManager manager = FindObjectOfType<UiManager>();
+
+            manager.Winner();
+
         }
         else
         {
