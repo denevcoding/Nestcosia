@@ -177,4 +177,14 @@ public class NavMeshController : MonoBehaviour
         return enemyDistance.magnitude;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<CharacterConrtoller>())
+        {
+            UiManager manager = FindObjectOfType<UiManager>();
+
+            manager.GameOver();
+        }
+    }
+
 }

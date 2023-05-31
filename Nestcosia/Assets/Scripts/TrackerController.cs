@@ -53,8 +53,10 @@ public class TrackerController : MonoBehaviour
 
         if (hitted)
         {
-            
-            Debug.Log("PlAYER CATCHED");
+            UiManager manager = FindObjectOfType<UiManager>();
+
+            manager.GameOver();
+            //Debug.Log("PlAYER CATCHED");
         }
 
         
