@@ -8,16 +8,17 @@ public class ButtonClick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void OnClick() {
+    public void OnClick()
+    {
         AudioManager.instance.PlaySFX(soundClickSFX);
         Debug.Log("me clickearon");
     }
@@ -28,5 +29,14 @@ public class ButtonClick : MonoBehaviour
         GameManager.instance.loadStart();
     }
 
+    public void loadCharacters()
+    {
+        GameManager.instance.loadCharacters();
+    }
+
+    public void loadGame()
+    {
+        GameManager.instance.loadGame();
+    }
 
 }
