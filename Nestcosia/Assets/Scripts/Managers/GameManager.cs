@@ -27,18 +27,18 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void AddPlantita()
     {
-        plantsAmount+=1;
+        plantsAmount += 1;
     }
 
     public void AddEnergy()
@@ -64,5 +64,10 @@ public class GameManager : MonoBehaviour
     public void loadCredits()
     {
         SceneManager.LoadScene("credits", LoadSceneMode.Single);
+    } 
+
+    public void LoadCutscene()
+    {
+        SceneManager.LoadScene("CutScene", LoadSceneMode.Single);
     }
 }
